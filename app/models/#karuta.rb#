@@ -1,0 +1,24 @@
+# encoding: utf-8 
+class Karuta < ActiveRecord::Base
+  def self.get_simo
+    loop do
+      str = nil
+      begin
+        result = nil
+        print "入力してください:\n"
+        begin
+          str = STDIN.gets.chomp
+        end until not ((str =~ /^[A-Z][a-z]$/) && (str.to_i == 0))
+        result = Karuta.where("yomi like '#{str}%'")
+        #print "検索件数=: #{result.length}\n"
+        exit if str.downcase == "exit"
+      end until (result. != [])
+      result.each do |s|
+        ku = s[:uta].split(/\s*　\s*/)
+        p ku[3]+ku[4]
+      end
+    end
+  end
+  
+
+end

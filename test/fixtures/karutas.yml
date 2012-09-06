@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  kazin: MyString
+  kazin_kana: MyString
+  uta: MyString
+  yomi: MyString
+
+two:
+  kazin: MyString
+  kazin_kana: MyString
+  uta: MyString
+  yomi: MyString
